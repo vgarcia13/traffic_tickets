@@ -31,7 +31,15 @@ Pre requisites: [Docker Desktop](https://www.docker.com/products/docker-desktop/
 
 ### Administration site
 #### Accessing the administration site
-* To access administration site, run `python manage.py createsuperuser` and type a username and password.
+##### * Docker
+* To access administration site, first run `docker container ls` and extract the `Container ID` 
+related to `traffic_tickets` image.
+* Run `docker exec -it <CONTAINER_ID> python manage.py createsuperuser` and type a username and password.
+* Navigate to [http://0.0.0.0:8000/admin/](http://0.0.0.0:8000/admin/) with the credentials created.
+
+##### * Virtualenv
+* To access administration site, run `python manage.py createsuperuser` (with `venv` activated) and type 
+a username and password.
 * Navigate to [http://0.0.0.0:8000/admin/](http://0.0.0.0:8000/admin/) with the credentials created.
 
 #### Create a `Person` instance
