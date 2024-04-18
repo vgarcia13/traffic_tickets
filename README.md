@@ -18,6 +18,7 @@ Pre requisites: [Docker Desktop](https://www.docker.com/products/docker-desktop/
 
 
 ### Using Virtualenv
+Pre requisites: Python 3.8+ installed locally
 * Clone this repository
 * Access the repo's root folder `/traffic_tickets`
 * Run `python3 -m venv venv` to create a brand new virtual env,
