@@ -83,6 +83,22 @@ CRUD operations are fully supported.
 * Navigate to [http://0.0.0.0:8000/api/](http://0.0.0.0:8000/api/) with the credentials created.
 * All CRUD operations in all the instances described above are supported here.
 
+**NOTE:** Processes have been simplified in the API instance for a more intuitive use.
+
+**EX:** When creating a `Person` within the API instance, a `Token` is created automatically.
+
+Forms are rendered to create new records and accessing elements using `GET` with the unique record `UUID`,
+`PUT`, `PATCH` and `DELETE` operations are supported.
+
+**EX:**
+```
+http://0.0.0.0:8000/api/persons/<PERSON_UUID>/
+http://0.0.0.0:8000/api/vehicles/<VEHICLE_UUID>/
+http://0.0.0.0:8000/api/officers/<OFFICER_UUID>/
+http://0.0.0.0:8000/api/tickets/<TICKET_UUID>/
+```
+
+
 #### `create_ticket` endpoint
 * For creating a ticket, a `POST` request needs to be done to [http://0.0.0.0:8000/api/tickets](http://0.0.0.0:8000/api/tickets)
 using a `body` like this:
