@@ -71,7 +71,7 @@ class TicketsSerializer(serializers.ModelSerializer):
 
 class CreateTicketsSerializer(serializers.ModelSerializer):
     plate = serializers.CharField()
-    notes = serializers.CharField(max_length=200, required=False)
+    notes = serializers.CharField(max_length=200, required=False, allow_blank=True, allow_null=True)
 
     class Meta:
         model = Ticket
